@@ -1,0 +1,54 @@
+$primary-color: #333;
+$secondary-color: #3db565;
+
+html,body{
+  font-family: 'Suisse';
+  font-weight: 300;
+  color: $primary-color;
+  font-size: 15.25px;
+  line-height: 1.867;
+}
+
+#app{
+  font-size: 15px;
+}
+
+.title-primary{
+  font-size: 47px;
+  font-weight: inherit;
+  margin:20px 0 0;
+  letter-spacing: 1.5px;
+}
+
+.title-secondary{
+  font-weight: inherit;
+  font-size: 31px;
+  margin: 15px 0 5px;
+  letter-spacing: 1.5px;
+  line-height: 1.4;
+
+  &--strong{
+    font-weight: inherit;
+    color: $secondary-color;
+  }
+
+  &--form{
+    color: white;
+  }
+}
+
+
+@media screen and (min-width: 48rem) {
+  .title-primary{
+    margin: 40px 0 6px;
+  }
+
+  .title-secondary{
+    margin: 0 0 26px;
+    line-height: inherit;
+
+    &--form{
+      margin-bottom: 9px;
+    }
+  }
+}

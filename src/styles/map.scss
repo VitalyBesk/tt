@@ -1,0 +1,90 @@
+.map{
+  background-color: rgb(38, 38, 38);
+  position: relative;
+  margin-top: 20px;
+}
+
+.map__inner{
+  color: white;
+}
+
+.map__subtitle{
+  font-size: 26px;
+  font-weight: inherit;
+  margin-bottom: 18px;
+  margin-top:20px;
+  letter-spacing: 1px;
+  line-height: 1.4;
+}
+
+.map__info{
+  padding-top: 15px;
+}
+
+.map-office__list{
+  list-style: none;
+  padding: 0;
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+}
+
+.map-office__link{
+  color: inherit;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+
+  &:hover,
+  &--active{
+    color: $secondary-color;
+  }
+
+  &:not(:last-child) {
+    margin-bottom:10px;
+  }
+}
+
+.map__descr{
+  font-size: 11px;
+  margin: 0 0 20px;
+}
+
+@media screen and (min-width: 48rem) {
+  .map{
+    margin-top: 84px;
+  }
+
+  .map__info{
+    padding-top: 85px;
+  }
+
+  .map__inner{
+    height: 500px;
+  }
+
+  .map-office__list{
+    flex-direction: row;
+  }
+
+  .map-office__link{
+
+    &:not(:last-child) {
+      margin-right: 20px;
+      margin-bottom: 0;
+    }
+  }
+
+  .map__subtitle{
+    line-height: inherit;
+    margin-top: 32px;
+
+  }
+
+  .map__descr{
+    margin: 0;
+  }
+}

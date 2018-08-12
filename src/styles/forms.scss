@@ -1,0 +1,183 @@
+.form  {
+  background: url('../assets/form.png')no-repeat center;
+  background-size: cover;
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+
+.form__group{
+  position: relative;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  &--checkbox{
+    margin-bottom: 42px;
+  }
+}
+
+.form__input{
+  background: transparent;
+  border: none;
+  line-height: 1;
+  font-size: 18px;
+  width: 100%;
+  display: block;
+  padding: 18px 18px 18px 100px;
+  outline: none;
+  transition: all .3s ease;
+  color: #000000;
+  box-sizing: border-box;
+  position: relative;
+  font-weight: inherit;
+
+  &:hover,&:focus{
+    color: white;
+
+    +.form__label{
+      color: white;
+
+      &:after{
+        width: 100%;
+      }
+
+      &--error {
+        color: red;
+      }
+    }
+  }
+}
+
+.form__label{
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: block;
+  padding: 18px 0;
+  color: #000000;
+  transition: all .3s ease;
+  z-index: -1;
+  font-size: 18px;
+  line-height: 1.4;
+
+  &:after{
+    content: '';
+    width: 0;
+    transition: width .3s ease;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    height: 1px;
+    background-color: white;
+  }
+
+  &:before{
+    content: '';
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    height: 1px;
+    z-index: -2;
+    background-color: rgb(4, 7, 7);
+  }
+
+  &--error{
+    color: red;
+
+    &:after,&:before{
+      background-color: red;
+    }
+  }
+}
+
+.form__checkbox{
+  cursor: pointer;
+  display: block;
+  width: 15px;
+  height: 15px;
+  user-select: none;
+  position: relative;
+  border: 1px solid transparent;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+
+    &:checked ~ .form__checkmark{
+      visibility: visible;
+    }
+  }
+
+  &--error{
+    border-color: red;
+  }
+
+}
+
+.form__checkmark{
+  height: 14px;
+  width: 13px;
+  background:  url('../assets/checkbox.png')no-repeat center;
+  background-size: cover;
+  visibility: hidden;
+}
+
+.form__label-checkbox{
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.form__descr{
+  color: #000;
+  margin:0;
+  padding-top: 16px;
+  font-size: 18px;
+}
+
+input:-webkit-autofill {
+  &:hover,
+  &:focus,
+  &:active {
+    transition-delay: 9999s;
+    transition-property: background-color, color
+  }
+}
+
+.form__error{
+  color: red;
+  font-size: 12px;
+  position: absolute;
+  bottom: -20px;
+}
+
+@media screen and (min-width: 48rem) {
+  .form{
+    padding-top: 83px;
+    padding-bottom: 100px;
+  }
+
+  .form__descr{
+    padding-left:28px;
+  }
+
+  .form__inner{
+    padding-right: 28px;
+  }
+
+  .form__label-checkbox{
+    line-height: inherit;
+  }
+
+}

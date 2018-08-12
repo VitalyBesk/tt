@@ -1,0 +1,11 @@
+@media screen and (max-width: 47rem) {
+  .row{
+    margin-left: auto;
+    margin-right: auto;
+
+    .row{
+      margin-left:-0.5rem;
+      margin-right: -0.5rem;
+    }
+  }
+}
