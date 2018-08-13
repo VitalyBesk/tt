@@ -12,11 +12,7 @@ Vue.use(VueScrollTo)
 
 Vue.directive('input-mask', {
 	bind: function(el) {
-		new Inputmask('numeric', {
-        digits: 0,
-        rightAlign: false,
-        autoGroup: true
-    }).mask(el);
+		new Inputmask({ mask: "+{*}9{*}" }).mask(el);
 	}
 });
 
